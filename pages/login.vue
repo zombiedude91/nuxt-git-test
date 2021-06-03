@@ -3,14 +3,12 @@
     <v-col class="text-center">
       <img src="/v.png" alt="Vuetify.js" class="mb-5" />
       <blockquote class="blockquote">
-        &#8220;First, solve the problem. Then, write the code.&#8221;
+        Login to your account
         <footer>
           <small>
             <em>&mdash;John Johnson</em>
           </small>
         </footer>
-        <v-spacer />
-        <v-btn color="primary" nuxt to="/login"> Continue </v-btn>
       </blockquote>
     </v-col>
   </v-row>

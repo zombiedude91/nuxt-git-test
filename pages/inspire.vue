@@ -9,8 +9,6 @@
             <em>&mdash;John Johnson</em>
           </small>
         </footer>
-        <v-spacer />
-        <v-btn color="primary" nuxt to="/login"> Continue </v-btn>
       </blockquote>
     </v-col>
   </v-row>

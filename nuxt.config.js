@@ -35,6 +35,9 @@ export default {
     // https://go.nuxtjs.dev/vuetify
     '@nuxtjs/vuetify',
   ],
+  router: {
+    middleware: ['auth']
+  },
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
@@ -42,6 +45,30 @@ export default {
     '@nuxtjs/axios',
     // https://go.nuxtjs.dev/pwa
     '@nuxtjs/pwa',
+      [
+        '@nuxtjs/firebase',
+        {
+          config: {
+            apiKey: "AIzaSyCt5RZrBqCpmpm_hGkIIzN2j1z6GjnU7E4",
+            authDomain: "nuxt-git-test.firebaseapp.com",
+            projectId: "nuxt-git-test",
+            storageBucket: "nuxt-git-test.appspot.com",
+            messagingSenderId: "679485840161",
+            appId: "1:679485840161:web:70d7dfd39e59c70285bc60",
+            measurementId: "G-G3PGLDKNSB"
+          },
+          services: {
+            auth: {
+              persistence: 'local', // default
+              initialize: {
+                onAuthStateChangedAction: 'onAuthStateChangedAction',
+                subscribeManually: false
+              },
+              ssr: false,
+            }
+          }
+        }
+      ],
     // https://go.nuxtjs.dev/content
     '@nuxt/content',
   ],
